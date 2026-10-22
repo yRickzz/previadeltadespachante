@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 import { fullAddress, navLinks, phoneUrl, site, whatsappUrl } from "@/config/site";
 import { Logo } from "./Logo";
@@ -18,6 +18,26 @@ export function Footer() {
           <p className="mt-6 font-display text-sm font-medium italic text-primary-foreground/85">
             {site.tagline}
           </p>
+          <div className="mt-6 flex gap-3">
+            <a
+              href={site.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram do Despachante Delta"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary-foreground/20 text-primary-foreground/85 transition-colors hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href={site.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook do Despachante Delta"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary-foreground/20 text-primary-foreground/85 transition-colors hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
+          </div>
         </div>
 
         <nav aria-label="Rodapé">

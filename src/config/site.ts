@@ -21,6 +21,10 @@ export const site = {
   phoneIntl: "5519997437213",
   defaultWhatsAppMessage:
     "Olá! Conheci o site do Despachante Delta e gostaria de mais informações sobre os serviços.",
+  social: {
+    instagram: "https://www.instagram.com/despachantedelta",
+    facebook: "https://www.facebook.com/share/1DuAsTD1ba/",
+  },
   google: {
     rating: 5,
     ratingDisplay: "5,0",
