@@ -2,7 +2,7 @@ import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
-import { DeltaMark } from "./Logo";
+import { LogoSymbol, ShieldOutline } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -11,23 +11,29 @@ function DeltaComposition() {
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
       <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full" fill="none">
         <path
-          d="M200 28 372 344H28L200 28Z"
-          className="stroke-primary/15"
+          d="M40 70C120 26 280 18 360 48C360 196 316 330 200 396C88 330 40 204 40 70Z"
+          className="stroke-primary/10"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
-          d="M200 74 334 320H66L200 74Z"
+          d="M76 92C140 58 262 52 324 74C324 192 290 296 200 348C112 296 76 196 76 92Z"
           className="fill-secondary"
-          strokeLinejoin="round"
         />
-        <path d="M200 140 290 304H110L200 140Z" className="fill-primary" strokeLinejoin="round" />
-        <path d="M200 206 254 304H146L200 206Z" className="fill-brand" strokeLinejoin="round" />
-        <path d="M200 74 334 320" className="stroke-primary/30" strokeWidth="1" />
-        <circle cx="200" cy="28" r="4" className="fill-brand" />
-        <circle cx="372" cy="344" r="4" className="fill-primary" />
-        <circle cx="28" cy="344" r="4" className="fill-primary" />
+        <path
+          d="M120 270C160 214 240 182 324 160M150 312C188 266 244 236 312 222"
+          className="stroke-background"
+          strokeWidth="6"
+          strokeLinecap="round"
+        />
+        <circle cx="40" cy="70" r="4" className="fill-brand" />
+        <circle cx="360" cy="48" r="4" className="fill-primary" />
+        <circle cx="200" cy="396" r="4" className="fill-primary" />
       </svg>
+
+      <div className="absolute left-1/2 top-[44%] flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-3xl bg-background p-7 shadow-lift sm:h-52 sm:w-52">
+        <LogoSymbol className="h-full w-full" />
+      </div>
 
       <div className="animate-float-slow absolute right-0 top-[14%] flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-right-4">
         <div className="flex gap-0.5 text-gold">
