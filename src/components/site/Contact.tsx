@@ -74,8 +74,8 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-              <Button asChild size="lg" className="sm:px-4">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Button asChild size="lg" className="sm:col-span-2">
                 <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon />
                   Conversar pelo WhatsApp

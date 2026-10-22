@@ -2,7 +2,7 @@ import { ExternalLink, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { googleReviewsUrl, site } from "@/config/site";
-import { DeltaMark } from "./Logo";
+import { ShieldOutline } from "./Logo";
 import { Reveal } from "./Reveal";
 
 export function Reviews() {
@@ -12,8 +12,8 @@ export function Reviews() {
       aria-labelledby="avaliacoes-title"
       className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24"
     >
-      <DeltaMark className="pointer-events-none absolute -right-16 -top-10 h-80 w-80 text-primary-foreground/[0.04]" />
-      <DeltaMark className="pointer-events-none absolute -bottom-20 left-10 h-56 w-56 text-primary-foreground/[0.03]" />
+      <ShieldOutline className="pointer-events-none absolute -right-16 -top-10 h-80 w-80 text-primary-foreground/[0.06]" />
+      <ShieldOutline className="pointer-events-none absolute -bottom-20 left-10 h-56 w-56 text-primary-foreground/[0.05]" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
