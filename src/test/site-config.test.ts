@@ -7,7 +7,7 @@ describe("Despachante Delta contact rules", () => {
   it("WhatsApp links use the number 5519997437213 with a pre-filled message", () => {
     const url = whatsappUrl();
     expect(url.startsWith("https://wa.me/5519997437213?text=")).toBe(true);
-    expect(decodeURIComponent(url.split("text=")[1])).toBe(
+    expect(decodeURIComponent(url.split("text=")[1] ?? "")).toBe(
       "Olá! Conheci o site do Despachante Delta e gostaria de mais informações sobre os serviços.",
     );
   });
@@ -32,7 +32,7 @@ describe("Despachante Delta contact rules", () => {
   it("each service card opens WhatsApp with a message naming that service", () => {
     for (const s of services) {
       expect(whatsappUrl(s.message)).toContain("wa.me/5519997437213");
-      expect(s.message.toLowerCase()).toContain(s.title.split(" ")[0].toLowerCase());
+      expect(s.message.toLowerCase()).toContain((s.title.split(" ")[0] ?? "").toLowerCase());
     }
   });
 });
