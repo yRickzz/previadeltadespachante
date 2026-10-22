@@ -78,7 +78,7 @@ export function Hero() {
           <Reveal delay={80}>
             <h1
               id="hero-title"
-              className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl lg:text-[3.5rem]"
+              className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl lg:text-[3.25rem]"
             >
               Despachante Delta
               <span className="mt-2 block font-bold text-brand">
