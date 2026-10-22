@@ -71,7 +71,7 @@ export function Hero() {
       className="relative overflow-hidden bg-gradient-to-b from-background via-background to-surface pt-18"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
-      <DeltaMark className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 text-primary/[0.035]" />
+      <ShieldOutline className="pointer-events-none absolute -left-20 bottom-4 h-72 w-72 text-primary/[0.05]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:py-28">
         <div>
