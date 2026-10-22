@@ -1,4 +1,4 @@
-import { Clock, MapPin, Navigation, Phone } from "lucide-react";
+import { Clock, Facebook, Instagram, MapPin, Navigation, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -93,6 +93,15 @@ export function Contact() {
                   Ligar agora
                 </a>
               </Button>
+            </div>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <span>Siga nas redes:</span>
+              <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card text-primary transition-colors hover:bg-accent">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-card text-primary transition-colors hover:bg-accent">
+                <Facebook className="h-5 w-5" />
+              </a>
             </div>
           </Reveal>
 
