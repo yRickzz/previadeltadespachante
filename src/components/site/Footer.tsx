@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-primary text-primary-foreground">
       <Hexagons className="-right-12 -top-10 h-56 w-56 opacity-60" />
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <Logo tone="light" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
