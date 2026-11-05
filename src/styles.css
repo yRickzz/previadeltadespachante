@@ -42,6 +42,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
+  --color-vivid: var(--vivid);
+  --color-petrol: var(--petrol);
   --color-highlight: var(--highlight);
   --color-silver: var(--silver-c);
   --color-destructive: var(--destructive);
