@@ -48,7 +48,7 @@ export function Hero() {
       className="bg-light-brand relative overflow-hidden pt-18"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
-      <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-90 sm:max-w-[55%]" />
+      <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-90 sm:max-w-[55%] [mask-image:linear-gradient(to_right,black_60%,transparent)]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-28">
         <div>
