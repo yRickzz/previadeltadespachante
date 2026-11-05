@@ -98,8 +98,8 @@ export function WhatsAppBanner() {
             </a>
           </Button>
           <p className="mt-3 text-sm text-primary-foreground/70">{site.phoneDisplay}</p>
-          <div className="mt-10 border-l-2 border-gold pl-4 font-display text-sm font-semibold uppercase tracking-[0.2em]">
-            <span className="block text-primary-foreground/70">Rapidez e eficiência</span>
+          <div className="mt-10 border-l-4 border-gold pl-5 font-display text-xl font-extrabold uppercase leading-tight tracking-[0.12em] sm:text-2xl lg:text-3xl">
+            <span className="block text-primary-foreground">Rapidez e eficiência</span>
             <span className="block text-highlight">que você merece</span>
           </div>
         </Reveal>
