@@ -8,6 +8,7 @@ import { Hero } from "@/components/site/Hero";
 import { Reviews } from "@/components/site/Reviews";
 import { Services } from "@/components/site/Services";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { WhatsAppBanner } from "@/components/site/WhatsAppBanner";
 import { directionsUrl, openingHours, site } from "@/config/site";
 
 const title = "Despachante Delta | Serviços de Despachante em Socorro – SP";
@@ -80,6 +81,7 @@ function Index() {
       <main id="conteudo">
         <Hero />
         <About />
+        <WhatsAppBanner />
         <Services />
         <Reviews />
         <Contact />
