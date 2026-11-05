@@ -2,7 +2,7 @@ import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
-import { LogoWatermark } from "./Decor";
+import fundoClaro from "@/assets/fundo-claro.jpg.asset.json";
 import { LogoSymbol } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -10,21 +10,7 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 function DeltaComposition() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
-      <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full" fill="none">
-        <path
-          d="M30 60C120 16 280 8 370 40C370 196 322 334 200 398C80 334 30 200 30 60Z"
-          className="stroke-silver/40"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M100 300C150 230 240 190 350 166"
-          className="stroke-silver/30"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-      <LogoSymbol className="absolute inset-[8%] h-[84%] w-[84%] opacity-80 grayscale contrast-75 drop-shadow-[0_24px_40px_rgba(0,0,0,0.18)]" />
+      <LogoSymbol className="absolute inset-[24%] h-[52%] w-[52%] drop-shadow-[0_18px_30px_rgba(0,0,0,0.18)]" />
 
       <div className="animate-float-slow absolute right-0 top-[14%] flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-right-4">
         <div className="flex gap-0.5 text-gold">
@@ -62,7 +48,7 @@ export function Hero() {
       className="bg-light-brand relative overflow-hidden pt-18"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
-      <LogoWatermark className="-left-40 top-10 hidden h-[640px] w-[640px] lg:block" />
+      <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-90 sm:max-w-[55%] [mask-image:linear-gradient(to_right,black_60%,transparent)]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-28">
         <div>

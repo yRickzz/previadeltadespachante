@@ -2,7 +2,7 @@ import { ExternalLink, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { googleReviewsUrl, site } from "@/config/site";
-import { Hexagons, LogoWatermark } from "./Decor";
+import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Reveal } from "./Reveal";
 
 export function Reviews() {
@@ -12,8 +12,7 @@ export function Reviews() {
       aria-labelledby="avaliacoes-title"
       className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24"
     >
-      <LogoWatermark tone="dark" className="-bottom-24 -left-24 h-[460px] w-[460px]" />
-      <Hexagons className="-right-10 -top-6 h-64 w-64 sm:h-80 sm:w-80" />
+      <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
