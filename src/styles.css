@@ -7,8 +7,8 @@
 /*
  * Despachante Delta — design system.
  * Brand palette (hex reference):
- *   navy #142D50 · institutional blue #244D78 · white #FFFFFF
- *   light gray #E8E9EC · dark gray #454A52
+ *   navy #002F61 · light #529AE6 · vivid #006CE0 · petrol #214366
+ *   medium #0056B3 · gray #B3B3B3 · white · black
  * All colors are defined here in oklch and consumed via semantic tokens.
  */
 
@@ -42,6 +42,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
+  --color-highlight: var(--highlight);
+  --color-silver: var(--silver-c);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -71,11 +73,15 @@
   --radius: 0.625rem;
 
   /* Brand */
-  --navy: oklch(0.297 0.071 257.2); /* #142D50 */
-  --navy-deep: oklch(0.251 0.064 259.7);
-  --institutional: oklch(0.413 0.086 251.6); /* #244D78 */
-  --light-gray: oklch(0.934 0.004 271.4); /* #E8E9EC */
-  --dark-gray: oklch(0.408 0.015 259.8); /* #454A52 */
+  --navy: #002f61;
+  --navy-deep: #00244b;
+  --institutional: #0056b3; /* azul médio */
+  --vivid: #006ce0;
+  --light-blue: #529ae6;
+  --petrol: #214366;
+  --silver: #b3b3b3;
+  --light-gray: #e6e7e9;
+  --dark-gray: #4a4f57;
 
   --background: oklch(1 0 0);
   --foreground: var(--navy);
@@ -92,10 +98,12 @@
   --secondary-foreground: var(--navy);
   --muted: var(--light-gray);
   --muted-foreground: var(--dark-gray);
-  --surface: oklch(0.97 0.003 264.5);
-  --accent: oklch(0.95 0.012 255);
+  --surface: #f5f6f7;
+  --accent: #eaf2fc;
   --accent-foreground: var(--navy);
-  --gold: oklch(0.728 0.138 89.7);
+  --gold: oklch(0.76 0.09 85);
+  --highlight: var(--light-blue);
+  --silver-c: var(--silver);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
   --border: var(--light-gray);
@@ -214,4 +222,10 @@
 
 @utility animate-float-slow {
   animation: float-slow 9s ease-in-out infinite;
+}
+
+/* Discreet gray vignette on light sections */
+@utility bg-light-brand {
+  background-color: var(--color-background);
+  background-image: radial-gradient(ellipse at center, transparent 55%, color-mix(in oklab, var(--silver) 22%, transparent) 100%);
 }
