@@ -64,7 +64,7 @@ export function Hero() {
               className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl lg:text-[3.25rem]"
             >
               Despachante Delta
-              <span className="mt-5 block font-display text-lg font-semibold uppercase leading-snug tracking-[0.28em] sm:text-xl">
+              <span className="mt-6 block border-l-4 border-vivid pl-5 font-display text-2xl font-extrabold uppercase leading-tight tracking-[0.12em] sm:text-3xl lg:text-4xl">
                 <span className="block text-muted-foreground">Rapidez e eficiência</span>
                 <span className="block text-primary">que você merece</span>
               </span>
