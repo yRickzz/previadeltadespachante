@@ -2,7 +2,7 @@ import { ExternalLink, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { googleReviewsUrl, site } from "@/config/site";
-import { ShieldOutline } from "./Logo";
+import { Hexagons, LogoWatermark } from "./Decor";
 import { Reveal } from "./Reveal";
 
 export function Reviews() {
@@ -12,17 +12,17 @@ export function Reviews() {
       aria-labelledby="avaliacoes-title"
       className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24"
     >
-      <ShieldOutline className="pointer-events-none absolute -right-16 -top-10 h-80 w-80 text-primary-foreground/[0.06]" />
-      <ShieldOutline className="pointer-events-none absolute -bottom-20 left-10 h-56 w-56 text-primary-foreground/[0.05]" />
+      <LogoWatermark tone="dark" className="-bottom-24 -left-24 h-[460px] w-[460px]" />
+      <Hexagons className="-right-10 -top-6 h-64 w-64 sm:h-80 sm:w-80" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
-          <p className="eyebrow text-primary-foreground/70">Avaliações no Google</p>
+          <p className="eyebrow text-highlight">Avaliações no Google</p>
           <h2
             id="avaliacoes-title"
             className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
           >
-            A confiança de nossos clientes
+            A <span className="text-highlight">confiança</span> de nossos clientes
           </h2>
         </Reveal>
 

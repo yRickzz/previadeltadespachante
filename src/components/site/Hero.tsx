@@ -2,7 +2,8 @@ import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
-import { LogoSymbol, ShieldOutline } from "./Logo";
+import { LogoWatermark } from "./Decor";
+import { LogoSymbol } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -11,29 +12,19 @@ function DeltaComposition() {
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
       <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full" fill="none">
         <path
-          d="M40 70C120 26 280 18 360 48C360 196 316 330 200 396C88 330 40 204 40 70Z"
-          className="stroke-primary/10"
+          d="M30 60C120 16 280 8 370 40C370 196 322 334 200 398C80 334 30 200 30 60Z"
+          className="stroke-silver/40"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
-          d="M76 92C140 58 262 52 324 74C324 192 290 296 200 348C112 296 76 196 76 92Z"
-          className="fill-secondary"
-        />
-        <path
-          d="M120 270C160 214 240 182 324 160M150 312C188 266 244 236 312 222"
-          className="stroke-background"
-          strokeWidth="6"
+          d="M100 300C150 230 240 190 350 166"
+          className="stroke-silver/30"
+          strokeWidth="1.5"
           strokeLinecap="round"
         />
-        <circle cx="40" cy="70" r="4" className="fill-brand" />
-        <circle cx="360" cy="48" r="4" className="fill-primary" />
-        <circle cx="200" cy="396" r="4" className="fill-primary" />
       </svg>
-
-      <div className="absolute left-1/2 top-[44%] flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-3xl bg-background p-7 shadow-lift sm:h-52 sm:w-52">
-        <LogoSymbol className="h-full w-full" />
-      </div>
+      <LogoSymbol className="absolute inset-[8%] h-[84%] w-[84%] opacity-80 grayscale contrast-75 drop-shadow-[0_24px_40px_rgba(0,0,0,0.18)]" />
 
       <div className="animate-float-slow absolute right-0 top-[14%] flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-right-4">
         <div className="flex gap-0.5 text-gold">
@@ -68,12 +59,12 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden bg-gradient-to-b from-background via-background to-surface pt-18"
+      className="bg-light-brand relative overflow-hidden pt-18"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
-      <ShieldOutline className="pointer-events-none absolute -left-20 bottom-4 h-72 w-72 text-primary/[0.05]" />
+      <LogoWatermark className="-left-40 top-10 hidden h-[640px] w-[640px] lg:block" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:py-28">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-28">
         <div>
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-medium text-muted-foreground shadow-soft">
@@ -87,8 +78,9 @@ export function Hero() {
               className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl lg:text-[3.25rem]"
             >
               Despachante Delta
-              <span className="mt-2 block font-bold text-brand">
-                Agilidade e confiança para você.
+              <span className="mt-5 block font-display text-lg font-semibold uppercase leading-snug tracking-[0.28em] sm:text-xl">
+                <span className="block text-muted-foreground">Rapidez e eficiência</span>
+                <span className="block text-primary">que você merece</span>
               </span>
             </h1>
           </Reveal>
@@ -114,7 +106,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200}>
+        <Reveal delay={200} className="lg:order-first">
           <DeltaComposition />
         </Reveal>
       </div>
