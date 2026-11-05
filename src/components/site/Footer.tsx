@@ -1,4 +1,4 @@
-import { Hexagons } from "./Decor";
+import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 import { fullAddress, navLinks, phoneUrl, site, whatsappUrl } from "@/config/site";
@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-primary text-primary-foreground">
-      <Hexagons className="-right-12 -top-10 h-56 w-56 opacity-60" />
+      <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <Logo tone="light" />
