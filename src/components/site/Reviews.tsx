@@ -16,12 +16,12 @@ export function Reviews() {
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
-          <p className="eyebrow text-highlight">Avaliações no Google</p>
+          <p className="eyebrow text-primary-foreground">Avaliações no Google</p>
           <h2
             id="avaliacoes-title"
             className="mt-3 text-3xl font-bold leading-tight sm:text-4xl"
           >
-            A <span className="text-highlight">confiança</span> de nossos clientes
+            A <span className="text-primary-foreground">confiança</span> de nossos clientes
           </h2>
         </Reveal>
 

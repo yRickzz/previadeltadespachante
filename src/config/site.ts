@@ -17,6 +17,8 @@ export const site = {
     country: "BR",
   },
   phoneDisplay: "(19) 99743-7213",
+  landlineDisplay: "(19) 3895-4575",
+  landlineIntl: "551938954575",
   /** International format, digits only (Brazil). */
   phoneIntl: "5519997437213",
   defaultWhatsAppMessage:
@@ -45,7 +47,8 @@ export function whatsappUrl(message: string = site.defaultWhatsAppMessage): stri
   return `https://wa.me/${site.phoneIntl}?text=${encodeURIComponent(message)}`;
 }
 
-export const phoneUrl = `tel:+${site.phoneIntl}`;
+export const phoneUrl = `tel:+${site.landlineIntl}`;
+export const directWhatsAppUrl = `https://wa.me/${site.phoneIntl}`;
 
 export const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}`;
 

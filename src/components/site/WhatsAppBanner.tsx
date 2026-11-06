@@ -3,7 +3,7 @@ import { ArrowRight, CheckCheck, ChevronLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
 import { Hexagons, LogoWatermark } from "./Decor";
-import { LogoSymbol } from "./Logo";
+import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -21,7 +21,7 @@ function Bubble({ side, children, time }: { side: "in" | "out"; children: React.
         {children}
         <span className="mt-1 flex items-center justify-end gap-1 text-[10px] text-muted-foreground">
           {time}
-          {out && <CheckCheck className="h-3 w-3 text-vivid" />}
+          {out && <CheckCheck className="h-3 w-3 text-primary" />}
         </span>
       </div>
     </div>
@@ -41,7 +41,7 @@ function Phone3D() {
           <div className="flex items-center gap-2 bg-primary px-3 pb-3 pt-9 text-primary-foreground">
             <ChevronLeft className="h-4 w-4 opacity-80" />
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-background p-1">
-              <LogoSymbol className="h-full w-full object-contain" />
+              <Logo className="w-full" />
             </span>
             <div className="min-w-0 flex-1">
               <p className="truncate text-[13px] font-semibold">{site.name}</p>
@@ -53,7 +53,7 @@ function Phone3D() {
           <div className="space-y-2.5 px-3 py-4">
             <div className="flex justify-center py-1">
               <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-background p-2 shadow-sm">
-                <LogoSymbol className="h-full w-full object-contain" />
+                <Logo className="w-full" />
               </span>
             </div>
             <Bubble side="out" time="09:12">Olá! Tenho dúvidas sobre a documentação do meu veículo.</Bubble>
@@ -85,7 +85,7 @@ export function WhatsAppBanner() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
         <Reveal>
           <h2 id="duvidas-title" className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-            <span className="text-highlight">Dúvidas</span> com a documentação do seu veículo?
+            <span className="text-primary-foreground">Dúvidas</span> com a documentação do seu veículo?
           </h2>
           <p className="mt-5 max-w-md text-lg text-primary-foreground/85">
             Entre em contato pelo WhatsApp. Estamos prontos para ajudar você!
@@ -100,7 +100,7 @@ export function WhatsAppBanner() {
           <p className="mt-3 text-sm text-primary-foreground/70">{site.phoneDisplay}</p>
           <div className="mt-10 border-l-4 border-gold pl-5 font-display text-xl font-extrabold uppercase leading-tight tracking-[0.12em] sm:text-2xl lg:text-3xl">
             <span className="block text-primary-foreground">Rapidez e eficiência</span>
-            <span className="block text-highlight">que você merece</span>
+            <span className="block text-primary-foreground">que você merece</span>
           </div>
         </Reveal>
         <Reveal delay={120}>

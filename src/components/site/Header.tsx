@@ -32,7 +32,7 @@ export function Header() {
         scrolled ? "border-border shadow-soft" : "border-transparent",
       )}
     >
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a href="#inicio" aria-label="Despachante Delta — voltar ao início" className="rounded-md">
           <Logo />
         </a>
@@ -55,7 +55,9 @@ export function Header() {
           </Button>
         </nav>
 
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
@@ -64,7 +66,7 @@ export function Header() {
           className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary transition-colors hover:bg-accent md:hidden"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        </Button>
       </div>
 
       <div
