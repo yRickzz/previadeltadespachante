@@ -1,7 +1,7 @@
 import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
-import { fullAddress, navLinks, phoneUrl, site, whatsappUrl } from "@/config/site";
+import { directWhatsAppUrl, fullAddress, navLinks, phoneUrl, site } from "@/config/site";
 import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
@@ -13,7 +13,7 @@ export function Footer() {
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <Logo tone="light" />
+          <Logo tone="light" className="w-44" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
             Serviços de despachante em Socorro – SP, com atendimento dedicado e orientação clara.
           </p>
@@ -72,13 +72,13 @@ export function Footer() {
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary-foreground/60" />
               <a href={phoneUrl} className="text-primary-foreground/85 hover:text-primary-foreground">
-                {site.phoneDisplay}
+                Telefone fixo {site.landlineDisplay}
               </a>
             </li>
             <li className="flex gap-3">
               <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-primary-foreground/60" />
               <a
-                href={whatsappUrl()}
+                href={directWhatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-foreground/85 hover:text-primary-foreground"

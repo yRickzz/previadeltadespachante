@@ -3,6 +3,7 @@ import { Clock, Facebook, Instagram, MapPin, Navigation, Phone } from "lucide-re
 import { Button } from "@/components/ui/button";
 import {
   directionsUrl,
+  directWhatsAppUrl,
   fullAddress,
   mapEmbedUrl,
   phoneUrl,
@@ -48,12 +49,24 @@ export function Contact() {
                 </span>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-brand">
-                    WhatsApp e telefone
+                    Telefone fixo
                   </h3>
                   <a
                     href={phoneUrl}
                     className="mt-1.5 inline-block rounded text-lg font-semibold text-primary transition-colors hover:text-brand"
                   >
+                    {site.landlineDisplay}
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-6 flex gap-4 border-t border-border pt-6">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent text-primary">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">WhatsApp</h3>
+                  <a href={directWhatsAppUrl} target="_blank" rel="noopener noreferrer" className="mt-1.5 inline-block rounded text-lg font-semibold text-primary hover:underline">
                     {site.phoneDisplay}
                   </a>
                 </div>

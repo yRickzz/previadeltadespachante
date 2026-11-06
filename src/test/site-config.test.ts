@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { services } from "@/config/services";
-import { directionsUrl, openingHours, phoneUrl, whatsappUrl } from "@/config/site";
+import { directWhatsAppUrl, directionsUrl, openingHours, phoneUrl, site, whatsappUrl } from "@/config/site";
 
 describe("Despachante Delta contact rules", () => {
   it("WhatsApp links use the number 5519997437213 with a pre-filled message", () => {
@@ -12,8 +12,14 @@ describe("Despachante Delta contact rules", () => {
     );
   });
 
-  it("'Ligar agora' dials (19) 99743-7213", () => {
-    expect(phoneUrl).toBe("tel:+5519997437213");
+  it("the landline dials (19) 3895-4575", () => {
+    expect(site.landlineDisplay).toBe("(19) 3895-4575");
+    expect(phoneUrl).toBe("tel:+551938954575");
+  });
+
+  it("the direct WhatsApp contact opens (19) 99743-7213", () => {
+    expect(site.phoneDisplay).toBe("(19) 99743-7213");
+    expect(directWhatsAppUrl).toBe("https://wa.me/5519997437213");
   });
 
   it("'Como chegar' opens Google Maps at Rua XV de Novembro, 68, Socorro", () => {

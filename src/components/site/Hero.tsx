@@ -3,14 +3,14 @@ import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
 import fundoClaro from "@/assets/fundo-claro.jpg.asset.json";
-import { LogoSymbol } from "./Logo";
+import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 function DeltaComposition() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
-      <LogoSymbol className="absolute inset-[24%] h-[52%] w-[52%] drop-shadow-[0_18px_30px_rgba(0,0,0,0.18)]" />
+      <Logo className="absolute left-1/2 top-1/2 w-[72%] -translate-x-1/2 -translate-y-1/2" />
 
       <div className="animate-float-slow absolute right-0 top-[14%] flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-right-4">
         <div className="flex gap-0.5 text-gold">
@@ -45,7 +45,7 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="bg-light-brand relative overflow-hidden pt-18"
+      className="bg-light-brand relative overflow-hidden pt-24"
     >
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
       <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-90 sm:max-w-[55%] [mask-image:linear-gradient(to_right,black_60%,transparent)]" />

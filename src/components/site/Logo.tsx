@@ -1,4 +1,5 @@
 import logoAsset from "@/assets/despachante-delta-logo.png.asset.json";
+import verticalLogoAsset from "@/assets/delta-logo-vertical.png.asset.json";
 import { cn } from "@/lib/utils";
 
 /** Official Despachante Delta symbol (shield), used as-is from the client's file. */
@@ -15,10 +16,7 @@ export function LogoSymbol({ className }: { className?: string }) {
   );
 }
 
-/**
- * Decorative shield outline inspired by the logo silhouette.
- * Used only as a faint background element, never as the logo itself.
- */
+/** Decorative outline only; brand placements use the complete original logo. */
 export function ShieldOutline({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 110" fill="none" aria-hidden="true" className={className}>
@@ -42,24 +40,12 @@ export function Logo({ tone = "dark", className }: { tone?: "dark" | "light"; cl
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-3",
-        tone === "dark" ? "text-primary" : "text-primary-foreground",
+        "inline-flex w-28 shrink-0 items-center justify-center",
+        tone === "light" && "rounded-lg bg-background p-3",
         className,
       )}
     >
-      {tone === "dark" ? (
-        <LogoSymbol className="h-10 w-10 shrink-0" />
-      ) : (
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background p-1.5 shadow-soft">
-          <LogoSymbol className="h-full w-full" />
-        </span>
-      )}
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-[0.62rem] font-semibold tracking-[0.32em] opacity-80">
-          DESPACHANTE
-        </span>
-        <span className="font-display text-xl font-extrabold tracking-[0.12em]">DELTA</span>
-      </span>
+      <img src={verticalLogoAsset.url} alt="Despachante Delta" width={1080} height={804} decoding="async" className="h-auto w-full object-contain" />
     </span>
   );
 }
