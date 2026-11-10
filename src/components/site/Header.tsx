@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Header() {
@@ -32,10 +31,7 @@ export function Header() {
         scrolled ? "border-border shadow-soft" : "border-transparent",
       )}
     >
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#inicio" aria-label="Despachante Delta — voltar ao início" className="rounded-md">
-          <Logo />
-        </a>
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-end px-5 sm:px-8">
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
