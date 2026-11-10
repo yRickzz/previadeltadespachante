@@ -1,7 +1,7 @@
-import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { site, whatsappUrl } from "@/config/site";
+import { whatsappUrl } from "@/config/site";
 import fundoClaro from "@/assets/fundo-claro.jpg.asset.json";
 import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
@@ -12,30 +12,6 @@ function DeltaComposition() {
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
       <Logo className="absolute left-1/2 top-1/2 w-[72%] -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="animate-float-slow absolute right-0 top-[14%] flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-right-4">
-        <div className="flex gap-0.5 text-gold">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="h-3.5 w-3.5 fill-current" />
-          ))}
-        </div>
-        <div className="leading-tight">
-          <p className="text-sm font-bold text-primary">{site.google.ratingDisplay} no Google</p>
-          <p className="text-xs text-muted-foreground">{site.google.reviewCount} avaliações</p>
-        </div>
-      </div>
-
-      <div
-        className="animate-float-slow absolute bottom-[6%] left-0 flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-card sm:-left-4"
-        style={{ animationDelay: "-4s" }}
-      >
-        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-primary">
-          <Clock className="h-4 w-4" />
-        </span>
-        <div className="leading-tight">
-          <p className="text-sm font-bold text-primary">Seg. a sex.</p>
-          <p className="text-xs text-muted-foreground">08h30 às 17h30</p>
-        </div>
-      </div>
     </div>
   );
 }

@@ -42,6 +42,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
+  --color-section-dark: var(--section-dark);
+  --color-whatsapp: var(--whatsapp);
   --color-vivid: var(--vivid);
   --color-petrol: var(--petrol);
   --color-highlight: var(--highlight);
@@ -76,6 +78,8 @@
 
   /* Brand */
   --navy: #002f61;
+  --section-dark: #253650;
+  --whatsapp: #25d366;
   --navy-deep: #00244b;
   --institutional: #0056b3; /* azul médio */
   --vivid: #006ce0;

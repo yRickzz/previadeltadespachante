@@ -10,7 +10,7 @@ export function Reviews() {
     <section
       id="avaliacoes"
       aria-labelledby="avaliacoes-title"
-      className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24"
+      className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24"
     >
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
 

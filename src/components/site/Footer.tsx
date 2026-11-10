@@ -9,16 +9,13 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden bg-primary text-primary-foreground">
+    <footer className="relative overflow-hidden bg-section-dark text-primary-foreground">
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <Logo tone="light" className="w-44" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
             Serviços de despachante em Socorro – SP, com atendimento dedicado e orientação clara.
-          </p>
-          <p className="mt-6 font-display text-sm font-medium italic text-primary-foreground/85">
-            {site.tagline}
           </p>
           <div className="mt-6 flex gap-3">
             <a

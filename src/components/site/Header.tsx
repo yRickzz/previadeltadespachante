@@ -37,22 +37,20 @@ export function Header() {
           <Logo />
         </a>
 
-        <nav aria-label="Navegação principal" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="relative rounded-md px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary after:absolute after:inset-x-3.5 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-brand after:transition-transform hover:after:scale-x-100"
+              className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/60 px-4 text-sm font-medium text-primary transition-colors hover:bg-accent"
             >
               {link.label}
             </a>
           ))}
-          <Button asChild className="ml-4">
-            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/60 px-4 text-sm font-medium text-primary transition-colors hover:bg-accent [&_svg]:h-4 [&_svg]:w-4">
               <WhatsAppIcon />
               Fale pelo WhatsApp
-            </a>
-          </Button>
+          </a>
         </nav>
 
         <Button
