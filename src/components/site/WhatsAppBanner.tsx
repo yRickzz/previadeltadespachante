@@ -76,7 +76,7 @@ function Phone3D() {
 
 export function WhatsAppBanner() {
   return (
-    <section aria-labelledby="duvidas-title" className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24">
+    <section aria-labelledby="duvidas-title" className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24">
       <LogoWatermark tone="dark" className="-left-24 top-1/2 h-[130%] -translate-y-1/2" />
       <Hexagons />
       <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full border border-highlight/20" />
