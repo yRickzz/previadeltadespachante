@@ -2,7 +2,7 @@ import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 import { directWhatsAppUrl, fullAddress, navLinks, phoneUrl, site } from "@/config/site";
-import { Logo } from "./Logo";
+import footerLogo from "@/assets/delta-logo-rodape.jpg.asset.json";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Footer() {
@@ -13,7 +13,7 @@ export function Footer() {
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <Logo tone="light" className="w-44" />
+          <img src={footerLogo.url} alt="Despachante Delta" width={1600} height={1287} decoding="async" className="h-auto w-48 rounded-lg" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
             Serviços de despachante em Socorro – SP, com atendimento dedicado e orientação clara.
           </p>
