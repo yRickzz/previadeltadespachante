@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { SectionWatermark } from "./Decor";
 
 import { Button } from "@/components/ui/button";
 import { services } from "@/config/services";
@@ -8,7 +9,8 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Services() {
   return (
-    <section id="servicos" aria-labelledby="servicos-title" className="bg-background py-20 sm:py-28">
+    <section id="servicos" aria-labelledby="servicos-title" className="relative overflow-hidden bg-background py-20 sm:py-28">
+      <SectionWatermark />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           id="servicos-title"

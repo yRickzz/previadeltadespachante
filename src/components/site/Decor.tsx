@@ -44,3 +44,17 @@ export function Hexagons({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** Whole official symbol, centered and static inside its section, behind all content. */
+export function SectionWatermark({ tone = "light" }: { tone?: "light" | "dark" }) {
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex select-none items-center justify-center p-8">
+      <LogoSymbol
+        className={cn(
+          "h-auto max-h-[80%] w-auto max-w-[80%]",
+          tone === "light" ? "opacity-[0.06] grayscale" : "opacity-[0.08] grayscale brightness-[2.2]",
+        )}
+      />
+    </div>
+  );
+}

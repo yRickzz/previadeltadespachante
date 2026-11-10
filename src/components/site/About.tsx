@@ -1,6 +1,6 @@
 import { HeartHandshake, ShieldCheck, Zap, type LucideIcon } from "lucide-react";
 
-import { LogoWatermark } from "./Decor";
+import { SectionWatermark } from "./Decor";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -25,7 +25,7 @@ const values: { title: string; text: string; icon: LucideIcon }[] = [
 export function About() {
   return (
     <section id="sobre" aria-labelledby="sobre-title" className="relative overflow-hidden bg-background py-20 sm:py-28">
-      <LogoWatermark className="-left-32 top-8 h-[420px] w-[420px] opacity-70" />
+      <SectionWatermark />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-20">
           <SectionHeading

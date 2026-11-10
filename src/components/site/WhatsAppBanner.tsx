@@ -2,7 +2,7 @@ import { ArrowRight, CheckCheck, ChevronLeft, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
-import { Hexagons, LogoWatermark } from "./Decor";
+import { Hexagons, SectionWatermark } from "./Decor";
 import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -38,7 +38,7 @@ function Phone3D() {
         <div aria-hidden className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-foreground" />
         <div className="overflow-hidden rounded-[2rem] bg-secondary">
           {/* chat header */}
-          <div className="flex items-center gap-2 bg-primary px-3 pb-3 pt-9 text-primary-foreground">
+          <div className="flex items-center gap-2 bg-section-dark px-3 pb-3 pt-9 text-primary-foreground">
             <ChevronLeft className="h-4 w-4 opacity-80" />
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-background p-1">
               <Logo className="w-full" />
@@ -77,7 +77,7 @@ function Phone3D() {
 export function WhatsAppBanner() {
   return (
     <section aria-labelledby="duvidas-title" className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24">
-      <LogoWatermark tone="dark" className="-left-24 top-1/2 h-[130%] -translate-y-1/2" />
+      <SectionWatermark tone="dark" />
       <Hexagons />
       <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full border border-highlight/20" />
       <div aria-hidden className="pointer-events-none absolute -bottom-40 right-1/3 h-80 w-80 rounded-full bg-vivid/15 blur-3xl" />
