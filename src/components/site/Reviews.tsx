@@ -1,5 +1,4 @@
 import { ExternalLink, Star } from "lucide-react";
-import { SectionWatermark } from "./Decor";
 
 import { Button } from "@/components/ui/button";
 import { googleReviewsUrl, site } from "@/config/site";
@@ -14,7 +13,6 @@ export function Reviews() {
       className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24"
     >
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
-      <SectionWatermark tone="dark" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
