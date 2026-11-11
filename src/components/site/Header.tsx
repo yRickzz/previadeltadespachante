@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { navLinks, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { Logo } from "./Logo";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const item =
@@ -24,9 +25,13 @@ export function Header() {
         scrolled ? "border-border shadow-soft" : "border-transparent",
       )}
     >
+      <div className="mx-auto flex min-h-20 max-w-6xl flex-col items-center gap-2 px-3 py-2.5 sm:px-8 md:flex-row md:justify-between">
+      <a href="#inicio" aria-label="Despachante Delta — início" className="shrink-0">
+        <Logo className="w-20 sm:w-24" />
+      </a>
       <nav
         aria-label="Navegação principal"
-        className="mx-auto flex min-h-20 max-w-6xl flex-wrap items-center justify-center gap-1.5 px-3 py-2.5 sm:gap-2 sm:px-8 md:justify-end"
+        className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 md:justify-end"
       >
         {navLinks.map((link) => (
           <a key={link.href} href={link.href} className={item}>
@@ -38,6 +43,7 @@ export function Header() {
           Fale pelo WhatsApp
         </a>
       </nav>
+      </div>
     </header>
   );
 }

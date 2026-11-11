@@ -8,9 +8,8 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 
 function DeltaComposition() {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
-      <Logo className="absolute left-1/2 top-1/2 w-[72%] -translate-x-1/2 -translate-y-1/2" />
-
+    <div className="mx-auto flex aspect-square w-full max-w-md items-center justify-center" aria-hidden="true">
+      <Logo className="w-[80%] max-w-full" />
     </div>
   );
 }
@@ -20,7 +19,7 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="bg-light-brand relative overflow-hidden pt-24"
+      className="bg-light-brand relative overflow-hidden pt-40 md:pt-28"
     >
             <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
 
