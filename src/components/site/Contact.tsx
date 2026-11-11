@@ -103,7 +103,7 @@ export function Contact() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="sm:px-4">
-                <a href={phoneUrl}>
+                <a href={directWhatsAppUrl} target="_blank" rel="noopener noreferrer">
                   <Phone />
                   Ligar agora
                 </a>
