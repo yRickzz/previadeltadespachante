@@ -216,19 +216,7 @@
   }
 }
 
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
-@utility animate-float-slow {
-  animation: float-slow 9s ease-in-out infinite;
-}
 
 /* Discreet gray vignette on light sections */
 @utility bg-light-brand {

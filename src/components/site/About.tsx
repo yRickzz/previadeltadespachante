@@ -1,6 +1,7 @@
 import { HeartHandshake, ShieldCheck, Zap, type LucideIcon } from "lucide-react";
 
 import { Reveal } from "./Reveal";
+import { FixedWatermark } from "./Decor";
 import { SectionHeading } from "./SectionHeading";
 
 const values: { title: string; text: string; icon: LucideIcon }[] = [
@@ -24,6 +25,7 @@ const values: { title: string; text: string; icon: LucideIcon }[] = [
 export function About() {
   return (
     <section id="sobre" aria-labelledby="sobre-title" className="relative overflow-hidden bg-background py-20 sm:py-28">
+      <FixedWatermark />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-20">
           <SectionHeading
