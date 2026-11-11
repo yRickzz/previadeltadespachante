@@ -105,7 +105,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/10">
+      <div className="relative border-t border-primary-foreground/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 pb-24 text-xs text-primary-foreground/60 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-6 sm:pr-24">
           <p>
             © {year} {site.name}. Todos os direitos reservados.

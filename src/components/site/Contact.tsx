@@ -20,7 +20,7 @@ export function Contact() {
   return (
     <section id="contato" aria-labelledby="contato-title" className="relative overflow-hidden bg-surface py-20 sm:py-28">
       <SectionWatermark />
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           id="contato-title"
           eyebrow="Contato"
