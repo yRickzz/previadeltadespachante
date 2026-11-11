@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const item =
-  "inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-primary px-2.5 text-xs font-medium text-primary transition-colors hover:bg-accent sm:h-10 sm:gap-2 sm:px-4 sm:text-sm [&_svg]:h-3.5 [&_svg]:w-3.5 sm:[&_svg]:h-4 sm:[&_svg]:w-4";
+  "inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-primary bg-section-dark px-2.5 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary sm:h-10 sm:gap-2 sm:px-4 sm:text-sm [&_svg]:h-3.5 [&_svg]:w-3.5 sm:[&_svg]:h-4 sm:[&_svg]:w-4";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
