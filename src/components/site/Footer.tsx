@@ -1,6 +1,5 @@
 import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Clock, Facebook, Instagram, MapPin, Phone } from "lucide-react";
-import { SectionWatermark } from "./Decor";
 
 import { directWhatsAppUrl, fullAddress, navLinks, phoneUrl, site } from "@/config/site";
 import footerLogo from "@/assets/delta-logo-rodape.jpg.asset.json";
@@ -12,7 +11,6 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-section-dark text-primary-foreground">
       <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
-      <SectionWatermark tone="dark" />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-12 pt-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           <img src={footerLogo.url} alt="Despachante Delta" width={1600} height={1287} decoding="async" className="h-auto w-48 rounded-lg" />

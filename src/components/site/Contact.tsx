@@ -1,5 +1,4 @@
 import { Clock, Facebook, Instagram, MapPin, Navigation, Phone } from "lucide-react";
-import { SectionWatermark } from "./Decor";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,7 +18,6 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 export function Contact() {
   return (
     <section id="contato" aria-labelledby="contato-title" className="relative overflow-hidden bg-surface py-20 sm:py-28">
-      <SectionWatermark />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           id="contato-title"

@@ -7,6 +7,7 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Reviews } from "@/components/site/Reviews";
 import { Services } from "@/components/site/Services";
+import { LogoSymbol } from "@/components/site/Logo";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { WhatsAppBanner } from "@/components/site/WhatsAppBanner";
 import { directionsUrl, openingHours, site } from "@/config/site";
@@ -87,6 +88,9 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-40 flex items-center justify-center p-8">
+        <LogoSymbol className="h-auto max-h-[60vh] w-auto max-w-[70vw] opacity-[0.05] grayscale" />
+      </div>
       <WhatsAppFloat />
     </>
   );

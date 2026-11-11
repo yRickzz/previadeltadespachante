@@ -2,7 +2,7 @@ import { ArrowRight, CheckCheck, ChevronLeft, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { site, whatsappUrl } from "@/config/site";
-import { Hexagons, SectionWatermark } from "./Decor";
+import { Hexagons } from "./Decor";
 import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
 import { WhatsAppIcon } from "./WhatsAppIcon";
@@ -77,7 +77,6 @@ function Phone3D() {
 export function WhatsAppBanner() {
   return (
     <section aria-labelledby="duvidas-title" className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24">
-      <SectionWatermark tone="dark" />
       <Hexagons />
       <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full border border-highlight/20" />
       <div aria-hidden className="pointer-events-none absolute -bottom-40 right-1/3 h-80 w-80 rounded-full bg-vivid/15 blur-3xl" />
