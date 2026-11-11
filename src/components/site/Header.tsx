@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { navLinks, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
+const item =
+  "inline-flex h-8 items-center justify-center gap-1.5 rounded-md border border-primary px-2.5 text-xs font-medium text-primary transition-colors hover:bg-accent sm:h-10 sm:gap-2 sm:px-4 sm:text-sm [&_svg]:h-3.5 [&_svg]:w-3.5 sm:[&_svg]:h-4 sm:[&_svg]:w-4";
+
 export function Header() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,13 +17,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
-
   return (
     <header
       className={cn(
@@ -31,71 +24,20 @@ export function Header() {
         scrolled ? "border-border shadow-soft" : "border-transparent",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-end px-5 sm:px-8">
-
-        <nav aria-label="Navegação principal" className="hidden items-center gap-2 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/60 px-4 text-sm font-medium text-primary transition-colors hover:bg-accent"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center gap-2 rounded-md border border-primary/60 px-4 text-sm font-medium text-primary transition-colors hover:bg-accent [&_svg]:h-4 [&_svg]:w-4">
-              <WhatsAppIcon />
-              Fale pelo WhatsApp
-          </a>
-        </nav>
-
-        <Button
-          variant="ghost"
-          size="icon"
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-primary transition-colors hover:bg-accent md:hidden"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
-      </div>
-
-      <div
-        id="mobile-menu"
-        className={cn(
-          "overflow-hidden border-t border-border bg-background transition-[max-height,opacity] duration-300 md:hidden",
-          open ? "max-h-96 opacity-100" : "pointer-events-none max-h-0 border-transparent opacity-0",
-        )}
+      <nav
+        aria-label="Navegação principal"
+        className="mx-auto flex min-h-20 max-w-6xl flex-wrap items-center justify-center gap-1.5 px-3 py-2.5 sm:gap-2 sm:px-8 md:justify-end"
       >
-        <nav aria-label="Navegação móvel" className="flex flex-col px-5 py-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              tabIndex={open ? 0 : -1}
-              className="rounded-md px-3 py-3 text-base font-medium text-primary transition-colors hover:bg-accent"
-            >
-              {link.label}
-            </a>
-          ))}
-          <Button asChild size="lg" className="mt-3">
-            <a
-              href={whatsappUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={open ? 0 : -1}
-              onClick={() => setOpen(false)}
-            >
-              <WhatsAppIcon />
-              Fale pelo WhatsApp
-            </a>
-          </Button>
-        </nav>
-      </div>
+        {navLinks.map((link) => (
+          <a key={link.href} href={link.href} className={item}>
+            {link.label}
+          </a>
+        ))}
+        <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className={item}>
+          <WhatsAppIcon />
+          Fale pelo WhatsApp
+        </a>
+      </nav>
     </header>
   );
 }

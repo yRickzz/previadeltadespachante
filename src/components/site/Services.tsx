@@ -11,7 +11,7 @@ export function Services() {
   return (
     <section id="servicos" aria-labelledby="servicos-title" className="relative overflow-hidden bg-background py-20 sm:py-28">
       <SectionWatermark />
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           id="servicos-title"
           eyebrow="Serviços de despachante em Socorro – SP"
