@@ -45,16 +45,23 @@ export function Hexagons({ className }: { className?: string }) {
   );
 }
 
-/** Whole official symbol, centered and static inside its section, behind all content. */
-export function SectionWatermark({ tone = "light" }: { tone?: "light" | "dark" }) {
+/**
+ * One static watermark: a position:fixed symbol at the exact screen center.
+ * Each section renders it inside a clip-path:inset(0) box, so it is clipped to
+ * that section and stays behind its content — the visitor sees a single,
+ * motionless logo while scrolling. No animation, no pointer/scroll handlers.
+ */
+export function FixedWatermark({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex select-none items-center justify-center p-8">
-      <LogoSymbol
-        className={cn(
-          "h-auto max-h-[80%] w-auto max-w-[80%]",
-          tone === "light" ? "opacity-[0.06] grayscale" : "opacity-[0.08] grayscale brightness-[2.2]",
-        )}
-      />
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 select-none [clip-path:inset(0)]">
+      <div className="fixed inset-0 flex items-center justify-center p-8">
+        <LogoSymbol
+          className={cn(
+            "h-auto max-h-[60vh] w-auto max-w-[70vw]",
+            tone === "light" ? "opacity-[0.07] grayscale" : "opacity-[0.09] grayscale brightness-[2.2]",
+          )}
+        />
+      </div>
     </div>
   );
 }

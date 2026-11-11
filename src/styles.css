@@ -226,9 +226,6 @@
   }
 }
 
-@utility animate-float-slow {
-  animation: float-slow 9s ease-in-out infinite;
-}
 
 /* Discreet gray vignette on light sections */
 @utility bg-light-brand {

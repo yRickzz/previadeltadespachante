@@ -1,8 +1,8 @@
 import { ExternalLink, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { FixedWatermark } from "./Decor";
 import { googleReviewsUrl, site } from "@/config/site";
-import fundoEscuro from "@/assets/fundo-escuro.jpg";
 import { Reveal } from "./Reveal";
 
 export function Reviews() {
@@ -12,7 +12,7 @@ export function Reviews() {
       aria-labelledby="avaliacoes-title"
       className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24"
     >
-      <img src={fundoEscuro} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+      <FixedWatermark tone="dark" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
