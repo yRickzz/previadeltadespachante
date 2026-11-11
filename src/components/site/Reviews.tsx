@@ -1,7 +1,6 @@
 import { ExternalLink, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { FixedWatermark } from "./Decor";
 import { googleReviewsUrl, site } from "@/config/site";
 import { Reveal } from "./Reveal";
 
@@ -12,7 +11,6 @@ export function Reviews() {
       aria-labelledby="avaliacoes-title"
       className="relative overflow-hidden bg-section-dark py-20 text-primary-foreground sm:py-24"
     >
-      <FixedWatermark tone="dark" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <Reveal>
