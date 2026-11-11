@@ -1,21 +1,4 @@
 import { cn } from "@/lib/utils";
-import { LogoSymbol } from "./Logo";
-
-/** Enlarged official symbol as a soft watermark (silver on light, blue-gray on dark). */
-export function LogoWatermark({ tone = "light", className }: { tone?: "light" | "dark"; className?: string }) {
-  return (
-    <div aria-hidden="true" className={cn("pointer-events-none absolute select-none", className)}>
-      <LogoSymbol
-        className={cn(
-          "h-full w-full",
-          tone === "light"
-            ? "opacity-[0.13] grayscale contrast-75 drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
-            : "opacity-[0.12] grayscale brightness-[2.2]",
-        )}
-      />
-    </div>
-  );
-}
 
 const HEX = "M50 2 93 26v48L50 98 7 74V26Z";
 
@@ -42,26 +25,5 @@ export function Hexagons({ className }: { className?: string }) {
         />
       ))}
     </svg>
-  );
-}
-
-/**
- * One static watermark: a position:fixed symbol at the exact screen center.
- * Each section renders it inside a clip-path:inset(0) box, so it is clipped to
- * that section and stays behind its content — the visitor sees a single,
- * motionless logo while scrolling. No animation, no pointer/scroll handlers.
- */
-export function FixedWatermark({ tone = "light" }: { tone?: "light" | "dark" }) {
-  return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 select-none [clip-path:inset(0)]">
-      <div className="fixed inset-0 flex items-center justify-center p-8">
-        <LogoSymbol
-          className={cn(
-            "h-auto max-h-[60vh] w-auto max-w-[70vw]",
-            tone === "light" ? "opacity-[0.07] grayscale" : "opacity-[0.09] grayscale brightness-[2.2]",
-          )}
-        />
-      </div>
-    </div>
   );
 }
