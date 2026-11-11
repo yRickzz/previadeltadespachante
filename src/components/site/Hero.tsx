@@ -10,7 +10,7 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 function DeltaComposition() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
-      <Logo tone="light" className="absolute left-1/2 top-1/2 w-[72%] -translate-x-1/2 -translate-y-1/2" />
+      <Logo className="absolute left-1/2 top-1/2 w-[72%] -translate-x-1/2 -translate-y-1/2" />
 
     </div>
   );
@@ -21,9 +21,10 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="relative overflow-hidden bg-section-dark pt-24"
+      className="bg-light-brand relative overflow-hidden pt-24"
     >
-            <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-15 mix-blend-luminosity sm:max-w-[55%] [mask-image:linear-gradient(to_right,black_60%,transparent)]" />
+            <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_right,black_20%,transparent_70%)]" />
+      <img src={fundoClaro.url} alt="" aria-hidden="true" className="pointer-events-none absolute left-0 top-0 h-full w-auto max-w-[70%] object-cover object-left opacity-90 sm:max-w-[55%] [mask-image:linear-gradient(to_right,black_60%,transparent)]" />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 md:py-24 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-28">
         <div>
@@ -36,23 +37,23 @@ export function Hero() {
           <Reveal delay={80}>
             <h1
               id="hero-title"
-              className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary-foreground sm:text-5xl lg:text-[3.25rem]"
+              className="mt-6 text-4xl font-extrabold leading-[1.08] text-primary sm:text-5xl lg:text-[3.25rem]"
             >
               Despachante Delta
               <span className="mt-6 block border-l-4 border-vivid pl-5 font-display text-2xl font-extrabold uppercase leading-tight tracking-[0.12em] sm:text-3xl lg:text-4xl">
-                <span className="block text-primary-foreground/75">Rapidez e eficiência</span>
-                <span className="block text-highlight">que você merece</span>
+                <span className="block text-muted-foreground">Rapidez e eficiência</span>
+                <span className="block text-primary">que você merece</span>
               </span>
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/80">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Conte com um atendimento dedicado para resolver suas necessidades com praticidade,
               transparência e eficiência.
             </p>
           </Reveal>
           <Reveal delay={240} className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" variant="light">
+            <Button asChild size="lg">
               <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon />
                 Falar com um especialista

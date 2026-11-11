@@ -23,20 +23,19 @@ const values: { title: string; text: string; icon: LucideIcon }[] = [
 
 export function About() {
   return (
-    <section id="sobre" aria-labelledby="sobre-title" className="relative overflow-hidden bg-section-dark py-20 sm:py-28">
+    <section id="sobre" aria-labelledby="sobre-title" className="relative overflow-hidden bg-background py-20 sm:py-28">
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-20">
           <SectionHeading
             id="sobre-title"
             align="left"
-            tone="light"
             eyebrow="Sobre nós"
             title="Despachante Delta"
           />
           <Reveal delay={100}>
-            <p className="text-lg leading-relaxed text-primary-foreground/80">
+            <p className="text-lg leading-relaxed text-muted-foreground">
               Estamos localizados no coração de{" "}
-              <strong className="font-semibold text-primary-foreground">Socorro – SP</strong>. Nosso objetivo
+              <strong className="font-semibold text-primary">Socorro – SP</strong>. Nosso objetivo
               é oferecer atendimento eficiente, orientação clara e praticidade para quem precisa de
               serviços de despachante. Entre em contato para saber como podemos ajudar com sua
               necessidade.

@@ -88,7 +88,7 @@ function Index() {
         <Contact />
       </main>
       <Footer />
-      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-40 flex items-center justify-center p-8">
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-30 flex select-none items-center justify-center p-8">
         <LogoSymbol className="h-auto max-h-[60vh] w-auto max-w-[70vw] opacity-[0.05] grayscale" />
       </div>
       <WhatsAppFloat />
